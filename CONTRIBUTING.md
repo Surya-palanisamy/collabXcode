@@ -1,8 +1,8 @@
-# Contributing to colab code
+# Contributing to collabXcode
 
-We welcome contributions to the colab code project! Whether you're reporting a bug, suggesting a new feature, or fixing a typo, your input is valuable to us. Here are some guidelines to help you get started:
+We welcome contributions to the collabXcode project! Whether you're reporting a bug, suggesting a new feature, or fixing a typo, your input is valuable to us. Here are some guidelines to help you get started:
 
-Thank you for considering contributing to colab code! Follow the steps below to contribute:
+Thank you for considering contributing to collabXcode! Follow the steps below to contribute:
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ Thank you for considering contributing to colab code! Follow the steps below to 
 
 2. **Clone the Repository:** Clone your forked repository to your local machine:
    ```bash
-   git clone https://github.com/<your_username>/colab-code.git
+   git clone https://github.com/<your_username>/collabXcode.git
    ```
 
 ## Making Changes
@@ -40,7 +40,7 @@ Thank you for considering contributing to colab code! Follow the steps below to 
 
 ## Reporting Bugs
 
-If you find a bug while using colab code, please report it by opening an issue on Github. Please include the following information:
+If you find a bug while using collabXcode, please report it by opening an issue on Github. Please include the following information:
 
 - Description of the bug
 - Steps to reproduce the bug
@@ -58,7 +58,7 @@ If you notice a spelling mistake or grammatical error in the project's documenta
 
 ## Thank You!
 
-Thank you for contributing to colab code! Your efforts make a difference.
+Thank you for contributing to collabXcode! Your efforts make a difference.
 If you have questions or need assistance, contact the project maintainers.
 
 Happy contributing!

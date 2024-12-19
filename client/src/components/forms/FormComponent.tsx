@@ -99,7 +99,7 @@ const FormComponent: React.FC = () => {
         <div className="flex min-h-screen items-center justify-center overflow-hidden">
             <div className="w-full max-w-md rounded-xl bg-gray-800 p-6 text-gray-100 sm:p-8 md:w-[400px]">
                 <p className="mb-6 text-center text-2xl font-bold">
-                    colab code
+                    collabXcode
                 </p>
                 <h1 className="mb-6 text-center text-2xl font-bold">
                     Join Room

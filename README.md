@@ -21,7 +21,7 @@ A collaborative, real-time code editor where users can seamlessly code together.
 
 ## 🚀 Live Preview
 
-You can view the live preview of the project [here](https://colab-code-code.vercel.app/).
+You can view the live preview of the project [here](https://collabXcode-code.vercel.app/).
 
 ## 💻 Tech Stack
 
@@ -41,7 +41,7 @@ You can view the live preview of the project [here](https://colab-code-code.verc
 1. **Fork this repository:** Click the Fork button located in the top-right corner of this page to fork the repository.
 2. **Clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/colab-share.git
+   git clone https://github.com/<your-username>/collabXcode.git
    ```
 3. **Set .env file:**
    Inside the client and server directories rename the `.env.example` file to `.env` and set the following environment variables:

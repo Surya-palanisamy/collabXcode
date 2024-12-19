@@ -2,7 +2,7 @@ import { FileSystemItem, Id } from "@/types/file";
 import { nanoid } from "nanoid";
 
 const initialCode = `function sayHi() {
-  console.log("👋 Hello world this is colab code");
+  console.log("👋 Hello world this is collabXcode");
 }
 
 sayHi();`;
