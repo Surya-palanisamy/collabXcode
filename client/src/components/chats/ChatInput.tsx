@@ -22,7 +22,7 @@ function ChatInput() {
 
         if (inputVal && inputVal.length > 0) {
             const message: ChatMessage = {
-                id: nanoid() ,
+                id: nanoid(10) ,
                 message: inputVal,
                 username: currentUser.username,
                 timestamp: formatDate(new Date().toISOString()),

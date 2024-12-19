@@ -9,11 +9,11 @@ sayHi();`;
 
 export const initialFileStructure: FileSystemItem = {
     name: "root",
-    id: nanoid(),
+    id: nanoid(10),
     type: "directory",
     children: [
         {
-            id: nanoid(),
+            id: nanoid(10),
             type: "file",
             name: "index.js",
             content: initialCode,

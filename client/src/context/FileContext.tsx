@@ -97,7 +97,7 @@ function FileContextProvider({ children }: { children: ReactNode }) {
             let newDirectory: FileSystemItem;
             if (typeof newDir === "string") {
                 newDirectory = {
-                    id: nanoid(),
+                    id: nanoid(10),
                     name: newDir,
                     type: "directory",
                     children: [],
@@ -373,7 +373,7 @@ function FileContextProvider({ children }: { children: ReactNode }) {
                 }
 
                 newFile = {
-                    id: nanoid(),
+                    id: nanoid(10),
                     name,
                     type: "file",
                     content: "",

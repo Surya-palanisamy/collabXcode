@@ -80,7 +80,7 @@ function FilesView() {
             if (entry.kind === "file") {
                 const file = await entry.getFile()
                 const newFile: FileSystemItem = {
-                    id: nanoid(),
+                    id: nanoid(10),
                     name: entry.name,
                     type: "file",
                     content: await readFileContent(file),
@@ -90,7 +90,7 @@ function FilesView() {
                 if (blackList.includes(entry.name)) continue
 
                 const newDirectory: FileSystemItem = {
-                    id: nanoid(),
+                    id: nanoid(10),
                     name: entry.name,
                     type: "directory",
                     children: await readDirectory(entry),
@@ -122,7 +122,7 @@ function FilesView() {
 
                 if (directoryIndex === -1) {
                     const newDirectory: FileSystemItem = {
-                        id: nanoid(),
+                        id: nanoid(10),
                         name: directoryPath,
                         type: "directory",
                         children: [],
@@ -132,7 +132,7 @@ function FilesView() {
                 }
 
                 const newFile: FileSystemItem = {
-                    id: nanoid(),
+                    id: nanoid(10),
                     name: file.name,
                     type: "file",
                     content: await readFileContent(file),
@@ -148,7 +148,7 @@ function FilesView() {
                 }
             } else {
                 const newFile: FileSystemItem = {
-                    id: nanoid(),
+                    id: nanoid(10),
                     name: file.name,
                     type: "file",
                     content: await readFileContent(file),

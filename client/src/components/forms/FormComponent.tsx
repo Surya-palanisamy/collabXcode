@@ -17,7 +17,7 @@ const FormComponent: React.FC = () => {
     const navigate = useNavigate();
 
     const createNewRoomId = () => {
-        setCurrentUser({ ...currentUser, roomId: nanoid() });
+        setCurrentUser({ ...currentUser, roomId: nanoid(10) });
         toast.success("Created a new Room Id");
         usernameRef.current?.focus();
     };
