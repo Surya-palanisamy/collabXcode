@@ -96,39 +96,27 @@ const FormComponent: React.FC = () => {
     ]);
 
     return (
-        <div className="flex min-h-screen items-center justify-center overflow-hidden">
-            <div className="w-full max-w-md rounded-xl bg-gray-800 p-6 text-gray-100 sm:p-8 md:w-[400px]">
-                <p className="mb-6 text-center text-2xl font-bold">
+        <div className="flex min-h-screen items-center justify-center overflow-hidden w-full ">
+            <div className="w-full max-w-md rounded-xl bg-gray-800 p-6 text-gray-100 sm:p-8 ">
+                <p className="mb-6 text-center text-2xl font-bold text-green-500">
                     collabXcode
                 </p>
-                <h1 className="mb-6 text-center text-2xl font-bold">
-                    Join Room
-                </h1>
+               
                 <form onSubmit={joinRoom} className="space-y-4">
                     <div>
-                        <label
-                            htmlFor="roomId"
-                            className="mb-1 block text-sm text-gray-400"
-                        >
-                            Room Id
-                        </label>
+                      
                         <input
                             type="text"
                             id="roomId"
                             name="roomId"
                             value={currentUser.roomId}
                             onChange={handleInputChanges}
-                            className="w-full rounded border border-gray-700 bg-gray-900 px-4 py-2 text-gray-100 focus:border-purple-400 focus:outline-none"
+                            className="w-full rounded-xl border h-[50px] border-solid border-gray-700 bg-gray-900 px-4 py-2 text-gray-100 focus:border-purple-400 focus:outline-none"
                             placeholder="Enter Room ID"
                         />
                     </div>
                     <div>
-                        <label
-                            htmlFor="username"
-                            className="mb-1 block text-sm text-gray-400"
-                        >
-                            Username
-                        </label>
+                      
                         <input
                             type="text"
                             id="username"
@@ -136,7 +124,7 @@ const FormComponent: React.FC = () => {
                             value={currentUser.username}
                             onChange={handleInputChanges}
                             ref={usernameRef}
-                            className="w-full rounded border border-gray-700 bg-gray-900 px-4 py-2 text-gray-100 focus:border-purple-400 focus:outline-none"
+                            className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-gray-100 focus:border-purple-400 focus:outline-none h-[50px]" 
                             placeholder="Enter Username"
                         />
                     </div>

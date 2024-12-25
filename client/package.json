@@ -9,12 +9,12 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@excalidraw/excalidraw": "^0.17.6",
         "@uiw/codemirror-extensions-color": "^4.21.21",
         "@uiw/codemirror-extensions-hyper-link": "^4.21.21",
         "@uiw/codemirror-extensions-langs": "^4.21.21",
         "@uiw/codemirror-themes-all": "^4.21.21",
         "@uiw/react-codemirror": "^4.21.21",
+        "lucide-react": "^0.469.0",
         "axios": "^1.7.4",
         "classnames": "^2.5.1",
         "codemirror": "^6.0.1",
