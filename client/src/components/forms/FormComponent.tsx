@@ -102,7 +102,7 @@ const FormComponent: React.FC = () => {
                     collabXcode
                 </p>
                
-                <form onSubmit={joinRoom} className="space-y-4">
+                <form onSubmit={joinRoom} className="space-y-4" autoComplete="off">
                     <div>
                       
                         <input
