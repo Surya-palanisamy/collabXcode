@@ -99,3 +99,8 @@ select {
         transform: rotate(10deg);
     }
 }
+@media print {
+  body {
+    display: none;
+  }
+}
