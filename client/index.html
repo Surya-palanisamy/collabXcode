@@ -33,5 +33,12 @@
     <body class="bg-dark text-white">
         <div id="root"></div>
         <script type="module" src="/src/main.tsx"></script>
+        <script>
+            document.addEventListener("keydown", function (event) {
+                if (event.ctrlKey && event.key === "p" || event.ctrlKey && event.key === "s") {
+                    event.preventDefault(); // or return false
+                }
+            });
+        </script>
     </body>
 </html>

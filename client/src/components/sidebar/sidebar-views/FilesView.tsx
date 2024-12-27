@@ -6,24 +6,29 @@ import cn from "classnames";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { BiArchiveIn } from "react-icons/bi";
-import { MdDriveFolderUpload, MdOutlineUploadFile } from "react-icons/md";
+import { TbFileUpload } from "react-icons/tb";
+import { MdDriveFolderUpload } from "react-icons/md";
+import { MdOutlineUploadFile } from "react-icons/md";
 import { nanoid } from "nanoid";
 
 function FilesView() {
     const { downloadFilesAndFolders, updateDirectory } = useFileSystem();
     const { viewHeight } = useResponsive();
+    const { minHeightReached } = useResponsive();
     const [isLoading, setIsLoading] = useState(false);
 
     const handleOpenDirectory = async () => {
         try {
             setIsLoading(true);
 
+            // Check for modern API support
             if ("showDirectoryPicker" in window) {
                 const directoryHandle = await window.showDirectoryPicker();
                 await processDirectoryHandle(directoryHandle);
                 return;
             }
 
+            // Fallback for browsers without `showDirectoryPicker`
             if ("webkitdirectory" in HTMLInputElement.prototype) {
                 const fileInput = document.createElement("input");
                 fileInput.type = "file";
@@ -41,6 +46,7 @@ function FilesView() {
                 return;
             }
 
+            // Notify if neither API is supported
             toast.error("Your browser does not support directory selection.");
         } catch (error) {
             console.error("Error opening directory:", error);
@@ -190,29 +196,27 @@ function FilesView() {
 
     return (
         <div
-            className="flex flex-col gap-1 px-4 py-2"
+            className="flex select-none flex-col gap-1 px-4 py-2"
             style={{ height: viewHeight, maxHeight: viewHeight }}
         >
             <FileStructureView />
             <div
-                className={cn(
-                    "flex flex-col justify-end pt-2 md:flex-row md:items-center md:gap-2",
-                    { hidden: isLoading },
-                )}
+                className={cn(`flex min-h-fit flex-col justify-end pt-2`, {
+                    hidden: minHeightReached,
+                })}
             >
+                <hr />
                 <button
-                    className="flex w-full justify-start rounded-md p-2 transition-all hover:bg-darkHover md:w-auto"
+                    className="mt-2 flex w-full justify-start rounded-md p-2 transition-all hover:bg-darkHover"
                     onClick={handleOpenDirectory}
                     disabled={isLoading}
                 >
-                    <MdDriveFolderUpload size={24} />
-                    <span className="ml-2">
-                        {isLoading ? "Loading..." : "Open Folder"}
-                    </span>
+                    <MdDriveFolderUpload className="" size={24} />
+                    {isLoading ? "Loading..." : "Open Folder"}
                 </button>
-                <label className="flex w-full cursor-pointer justify-start rounded-md p-2 transition-all hover:bg-darkHover md:w-auto">
-                    <MdOutlineUploadFile size={24} />
-                    <span className="ml-2">Upload Files</span>
+                <label className="mt-2 flex w-full cursor-pointer justify-start rounded-md p-2 transition-all hover:bg-darkHover mr-6">
+                    <MdOutlineUploadFile className="" size={24} />
+                    <span>Upload Files</span>
                     <input
                         type="file"
                         multiple
@@ -221,11 +225,10 @@ function FilesView() {
                     />
                 </label>
                 <button
-                    className="flex w-full justify-start rounded-md p-2 transition-all hover:bg-darkHover md:w-auto"
+                    className="flex w-full justify-start rounded-md p-2 transition-all hover:bg-darkHover"
                     onClick={downloadFilesAndFolders}
                 >
-                    <BiArchiveIn size={22} className="mr-2" />
-                    Download Code
+                    <BiArchiveIn className="mr-2" size={22} /> Download Code
                 </button>
             </div>
         </div>
