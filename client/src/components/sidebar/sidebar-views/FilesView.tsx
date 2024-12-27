@@ -6,7 +6,6 @@ import cn from "classnames";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { BiArchiveIn } from "react-icons/bi";
-import { TbFileUpload } from "react-icons/tb";
 import { MdDriveFolderUpload } from "react-icons/md";
 import { MdOutlineUploadFile } from "react-icons/md";
 import { nanoid } from "nanoid";
