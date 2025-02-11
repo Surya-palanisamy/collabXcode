@@ -27,7 +27,7 @@ export const useSocket = (): SocketContextType => {
     return context;
 };
 
-const BACKEND_URL = "http://13.232.205.70:3000/";
+const BACKEND_URL = "13.232.205.70:3000";
 
 const SocketProvider = ({ children }: { children: ReactNode }) => {
     const {
