@@ -27,7 +27,7 @@ export const useSocket = (): SocketContextType => {
     return context;
 };
 
-const BACKEND_URL = "collabXcode-server.glitch.me";
+const BACKEND_URL = "";
 
 const SocketProvider = ({ children }: { children: ReactNode }) => {
     const {

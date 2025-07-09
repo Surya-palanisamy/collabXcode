@@ -1,14 +1,23 @@
 {
-  "name": "collab X code",
+  "name": "collab-x-code",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collaborative real-time code editor using Express and Socket.IO",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/server.ts",
-    "start": "tsc && node dist/server.js"
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "collaborative",
+    "realtime",
+    "code",
+    "editor",
+    "express",
+    "socket.io"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
