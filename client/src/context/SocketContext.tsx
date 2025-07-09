@@ -27,7 +27,7 @@ export const useSocket = (): SocketContextType => {
     return context;
 };
 
-const BACKEND_URL = "";
+const BACKEND_URL = "https://collabxcode.onrender.com";
 
 const SocketProvider = ({ children }: { children: ReactNode }) => {
     const {
